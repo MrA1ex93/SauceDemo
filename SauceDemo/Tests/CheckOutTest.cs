@@ -9,7 +9,7 @@ namespace SauceDemo.Tests
     {
         [Test]
         [Description("Check that elements are added to the CheckOut")]
-        public void Should_Add_Items_To_CheckOut()
+        public void ShouldAddItemsToCheckOut()
         {
             LoginPage.Login();
 
