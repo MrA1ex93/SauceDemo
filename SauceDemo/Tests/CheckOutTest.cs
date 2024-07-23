@@ -18,9 +18,9 @@ namespace SauceDemo.Tests
             MainPage.NavigateToCart();
             CartPage.ClickCheckOutButton();
 
-            CheckOutPage1.EnterValueFirstName("Test_User");
-            CheckOutPage1.EnterValueLastName("Test_Last_Name");
-            CheckOutPage1.EnterValueZip("12341234");
+            CheckOutPage1.EnterValueFirstName("UserTest");
+            CheckOutPage1.EnterValueLastName("LastNameTest");
+            CheckOutPage1.EnterValueZip("777");
             CheckOutPage1.ClickContinueButton();
 
             Assert.That(CheckOutPage2.CheckThatItemsInCheckOut(3), Is.True, "Item 3 should be in CheckOut page.");

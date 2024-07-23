@@ -8,27 +8,23 @@ namespace SauceDemo.Pages
     {
         private static List<string> clothesElementsNames = new List<string>();
         private static List<string> clothesElementsNames1 = new List<string>();
-
         private static List<string> clothesElementsPricesText = new List<string>();
         private static List<string> clothesElementsPricesText1 = new List<string>();
         private static List<double> clothesElementsPrices = new List<double>();
         private static List<double> clothesElementsPrices1 = new List<double>();
 
-        private static List<IWebElement> clothesElements => driver.FindElements(By.XPath("//*[@class='inventory_item_name ']")).ToList();
-        private static List<IWebElement> clothesPrices => driver.FindElements(By.XPath("//*[@class='inventory_item_price']")).ToList();
-
-        private static IWebElement cartButton = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='shopping_cart_link']")));
-
-        private static IWebElement buttonOne = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[1]//button")));
-        private static IWebElement buttonTwo = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[2]//button")));
-        private static IWebElement buttonThree = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[3]//button")));
-        private static IWebElement buttonFour = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[4]//button")));
-        private static IWebElement buttonFive = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[5]//button")));
-        private static IWebElement buttonSix = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[6]//button")));
-
-        private static IWebElement dropdown = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.ClassName("product_sort_container")));
-        private static IWebElement dropdownOption1 = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='product_sort_container']/option[1]")));
-        private static IWebElement dropdownOption3 = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='product_sort_container']/option[3]")));
+        private static List<IWebElement> clothesElements => Driver.GetDriver().FindElements(By.XPath("//*[@class='inventory_item_name ']")).ToList();
+        private static List<IWebElement> clothesPrices => Driver.GetDriver().FindElements(By.XPath("//*[@class='inventory_item_price']")).ToList();
+        private static IWebElement cartButton => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='shopping_cart_link']")));
+        private static IWebElement buttonOne => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[1]//button")));
+        private static IWebElement buttonTwo => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[2]//button")));
+        private static IWebElement buttonThree => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[3]//button")));
+        private static IWebElement buttonFour => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[4]//button")));
+        private static IWebElement buttonFive => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[5]//button")));
+        private static IWebElement buttonSix => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='inventory_list']/div[6]//button")));
+        private static IWebElement dropdown => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.ClassName("product_sort_container")));
+        private static IWebElement dropdownOption1 => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='product_sort_container']/option[1]")));
+        private static IWebElement dropdownOption3 => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='product_sort_container']/option[3]")));
 
         private static List<string> GetNames(List<string> list)
         {

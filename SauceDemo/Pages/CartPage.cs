@@ -6,17 +6,15 @@ namespace SauceDemo.Pages
 {
     internal class CartPage : BasePage
     {
-
-        private static IWebElement checkOut = Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='btn btn_action btn_medium checkout_button ']")));
+        private static IWebElement checkOut => Driver.GetWait(10).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='btn btn_action btn_medium checkout_button ']")));
         private static bool itemOne() => Driver.GetWait(5).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[contains(text(),'Backpack')]"))).Displayed;
         private static bool itemTwo() => Driver.GetWait(5).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[contains(text(),'Bike Light')]"))).Displayed;
         private static bool itemThree() => Driver.GetWait(5).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[contains(text(),'Bolt T-Shirt')]"))).Displayed;
         private static bool itemFour() => Driver.GetWait(5).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[contains(text(),'Jacket')]"))).Displayed;
         private static bool itemFive() => Driver.GetWait(5).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[contains(text(),'Onesie')]"))).Displayed;
         private static bool itemSix() => Driver.GetWait(5).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[contains(text(),'Red')]"))).Displayed;
-
-        private static void removeItemOne() => driver.FindElement(By.XPath("//*[@class='cart_list']//div[3]//button")).Click();
-        private static void removeItemTwo() => driver.FindElement(By.XPath("//*[@class='cart_list']//div[4]//button")).Click();
+        private static void removeItemOne() => Driver.GetDriver().FindElement(By.XPath("//*[@class='cart_list']//div[3]//button")).Click();
+        private static void removeItemTwo() => Driver.GetDriver().FindElement(By.XPath("//*[@class='cart_list']//div[4]//button")).Click();
 
         public static void ClickCheckOutButton() => checkOut.Click();
 

@@ -13,7 +13,6 @@ namespace SauceDemo.Tests
         public void MainPageTest1()
         {
             LoginPage.Login();
-
             MainPage.ClickAndChooseDropdownOption(1);
 
             var result = MainPage.AreNamesSorted();
@@ -25,7 +24,6 @@ namespace SauceDemo.Tests
         public void MainPageTest2()
         {
             LoginPage.Login();
-
             MainPage.ClickAndChooseDropdownOption(3);
 
             var result = MainPage.ArePricesSorted();

@@ -15,7 +15,6 @@ namespace SauceDemo.Tests
 
             MainPage.AddItemToCart(1);
             MainPage.AddItemToCart(6);
-
             MainPage.NavigateToCart();
 
             var result1 = CartPage.CheckThatAdded(1);
@@ -33,7 +32,6 @@ namespace SauceDemo.Tests
 
             MainPage.AddItemToCart(2);
             MainPage.AddItemToCart(4);
-
             MainPage.NavigateToCart();
 
             CartPage.ClickRemoveButton(2);
