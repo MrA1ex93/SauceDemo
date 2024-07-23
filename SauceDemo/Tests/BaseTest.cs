@@ -4,7 +4,6 @@ using SauceDemo.Pages;
 
 namespace SauceDemo.Tests
 {
-
     [AllureNUnit]
     internal class BaseTest
     {
